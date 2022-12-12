@@ -1,0 +1,11 @@
+{
+  "Id": "MockSubnauticaTelemetry",
+  "DisplayName": "MockSubnauticaTelemetry",
+  "Author": "Roker2",
+  "Version": "0.0.1",
+  "Dependencies": [ "SMLHelper", "SubnauticaTelemetry" ],
+  "LoadAfter": [ "SubnauticaTelemetry" ],
+  "Enable": true,
+  "Game": "Subnautica",
+  "AssemblyName": "MockSubnauticaTelemetry.dll"
+}
