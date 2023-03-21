@@ -34,14 +34,21 @@
     <Reference Include="0Harmony">
       <HintPath>D:\Program Files\Epic Games\Subnautica\BepInEx\core\0Harmony.dll</HintPath>
     </Reference>
-    <Reference Include="QModInstaller">
-      <HintPath>D:\Program Files\Epic Games\Subnautica\BepInEx\plugins\QModManager\QModInstaller.dll</HintPath>
+    <Reference Include="BepInEx">
+      <HintPath>D:\Program Files\Epic Games\Subnautica\BepInEx\core\BepInEx.dll</HintPath>
     </Reference>
     <Reference Include="SMLHelper">
-      <HintPath>D:\Program Files\Epic Games\Subnautica\QMods\Modding Helper\SMLHelper.dll</HintPath>
+      <HintPath>D:\Program Files\Epic Games\Subnautica\BepInEx\plugins\Modding Helper\SMLHelper.dll</HintPath>
     </Reference>
     <Reference Include="SubnauticaTelemetry">
-      <HintPath>D:\Program Files\Epic Games\Subnautica\QMods\SubnauticaTelemetry\SubnauticaTelemetry.dll</HintPath>
+      <HintPath>D:\Program Files\Epic Games\Subnautica\BepInEx\plugins\SubnauticaTelemetry\SubnauticaTelemetry.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\Epic Games\Subnautica\Subnautica_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>D:\Program Files\Epic Games\Subnautica\Subnautica_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -54,7 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
-    <Compile Include="Mock\MockForceFeedbackProcessor.cs" />
+    <Compile Include="Realization\MockForceFeedbackProcessor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,14 +1,14 @@
 ﻿using SubnauticaTelemetry.ForceFeedback;
 using System.Collections.Generic;
-using Logger = QModManager.Utility.Logger;
+using BepInEx.Logging;
 
-namespace SubnauticaTelemetry.Mock
+namespace MockSubnauticaTelemetry.Realization
 {
     class MockForceFeedbackProcessor : IForceFeedbackProcessor
     {
         public void ProcessEvent(ForceFeedbackEvent ffevent)
         {
-            Logger.Log(Logger.Level.Info, ffevent.ToString());
+            Main.Log.LogInfo(ffevent.ToString());
         }
 
         public void ProcessEvents(ForceFeedbackEvent[] ffevents)
@@ -29,7 +29,7 @@ namespace SubnauticaTelemetry.Mock
 
         public void StopAllEvents()
         {
-            Logger.Log(Logger.Level.Info, "Stop all events");
+            Main.Log.LogInfo("Stop all events");
         }
     }
 }

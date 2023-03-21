@@ -1,19 +1,24 @@
 ﻿using HarmonyLib;
-using QModManager.API.ModLoading;
-using System.Reflection;
-using SubnauticaTelemetry.Mock;
+using BepInEx;
+using MockSubnauticaTelemetry.Realization;
+using BepInEx.Logging;
 
 namespace MockSubnauticaTelemetry
 {
-    [QModCore]
-    public class Main
+    [BepInPlugin(PluginGUID, PluginName, PluginVersion)]
+    public class Main : BaseUnityPlugin
     {
-        [QModPatch]
-        public static void Load()
+        private const string PluginGUID = "by.roker2.subnauticamocktelemetry";
+        private const string PluginName = "Subnautica Mock Telemetry";
+        private const string PluginVersion = "1.0.0";
+
+        internal static ManualLogSource Log;
+
+        private void Start()
         {
-            var assembly = Assembly.GetExecutingAssembly();
-            new Harmony($"Roker2_{assembly.GetName().Name}").PatchAll(assembly);
+            new Harmony(PluginGUID).PatchAll();
             SubnauticaTelemetry.Main.AddForceFeedbackProcessor(new MockForceFeedbackProcessor());
+            Log = Logger;
         }
     }
 }
