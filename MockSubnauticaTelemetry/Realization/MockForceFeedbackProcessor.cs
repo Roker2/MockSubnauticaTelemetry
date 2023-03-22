@@ -8,7 +8,7 @@ namespace MockSubnauticaTelemetry.Realization
     {
         public void ProcessEvent(ForceFeedbackEvent ffevent)
         {
-            Main.Log.LogInfo(ffevent.ToString());
+            MockSubnauticaTelemetryPlugin.Log.LogInfo(ffevent.ToString());
         }
 
         public void ProcessEvents(ForceFeedbackEvent[] ffevents)
@@ -29,7 +29,7 @@ namespace MockSubnauticaTelemetry.Realization
 
         public void StopAllEvents()
         {
-            Main.Log.LogInfo("Stop all events");
+            MockSubnauticaTelemetryPlugin.Log.LogInfo("Stop all events");
         }
     }
 }

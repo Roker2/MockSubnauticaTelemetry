@@ -6,7 +6,7 @@ using BepInEx.Logging;
 namespace MockSubnauticaTelemetry
 {
     [BepInPlugin(PluginGUID, PluginName, PluginVersion)]
-    public class Main : BaseUnityPlugin
+    public class MockSubnauticaTelemetryPlugin : BaseUnityPlugin
     {
         private const string PluginGUID = "by.roker2.subnauticamocktelemetry";
         private const string PluginName = "Subnautica Mock Telemetry";
@@ -17,7 +17,7 @@ namespace MockSubnauticaTelemetry
         private void Start()
         {
             new Harmony(PluginGUID).PatchAll();
-            SubnauticaTelemetry.Main.AddForceFeedbackProcessor(new MockForceFeedbackProcessor());
+            SubnauticaTelemetry.SubnauticaTelemetryPlugin.AddForceFeedbackProcessor(new MockForceFeedbackProcessor());
             Log = Logger;
         }
     }
